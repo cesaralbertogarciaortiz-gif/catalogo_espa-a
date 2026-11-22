@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Productos de España para México</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf7f0;--sf:#fff;--tx:#2a1d18;--mu:#6d5f56;--ac:#b3262d;--af:#b3262d;--ln:#eadfce;--wb:#fff3cf;--wl:#e0a421;--wt:#3d2c00;--gb:#e3f3e8;--gl:#bfe0c9;--gn:#1f6b3f;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161110;--sf:#211a17;--tx:#f4ece4;--mu:#bdafa3;--ac:#c4363a;--af:#ff9a9d;--ln:#382d27;--wb:#3a2d0a;--wl:#d9a21b;--wt:#ffe9b0;--gb:#14261b;--gl:#285a3a;--gn:#8fd6a8;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#161110;--sf:#211a17;--tx:#f4ece4;--mu:#bdafa3;--ac:#c4363a;--af:#ff9a9d;--ln:#382d27;--wb:#3a2d0a;--wl:#d9a21b;--wt:#ffe9b0;--gb:#14261b;--gl:#285a3a;--gn:#8fd6a8;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3,.serif{font-family:Fraunces,Georgia,"Times New Roman",serif}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+.hero{background:radial-gradient(circle at 85% 10%,rgba(242,177,52,.45),transparent 45%),linear-gradient(135deg,#7f1a20,#b3262d 55%,#cf5a2b);color:#fff7ea;border-radius:0 0 36px 36px;padding:44px 0 52px}
+.hero .wrap{display:grid;gap:28px;align-items:center}
+@media (min-width:780px){.hero .wrap{grid-template-columns:1.25fr 1fr}}
+.kicker{margin:0 0 10px;color:#ffd98a;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px}
+h1{font-size:clamp(32px,6vw,56px);line-height:1.08;margin:0;font-weight:800}
+.lead{font-size:18px;margin:16px 0 24px;max-width:32em;color:#ffeccf}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 20px;border-radius:12px;background:var(--ac);color:#fff;font-weight:700;text-decoration:none;transition:transform .15s,filter .15s}
+.btn:hover{filter:brightness(1.1);transform:translateY(-1px)}
+.hero .btn{background:#ffd98a;color:#3d1a05}
+a:focus-visible,button:focus-visible{outline:3px solid var(--af);outline-offset:2px}
+.stack{display:flex;justify-content:center;gap:0}
+.stack img{width:min(30vw,150px);aspect-ratio:1/1;object-fit:contain;background:#fff;border-radius:20px;border:4px solid #fff7ea;box-shadow:0 12px 28px rgba(0,0,0,.3);margin:0 -10px}
+.stack img:nth-child(1){transform:rotate(-8deg)}
+.stack img:nth-child(2){transform:translateY(-14px) scale(1.12);z-index:1}
+.stack img:nth-child(3){transform:rotate(8deg)}
+.info{margin-top:-26px;position:relative;display:grid;gap:12px}
+.warn{display:flex;gap:14px;align-items:center;background:var(--wb);color:var(--wt);border:2px solid var(--wl);border-radius:18px;padding:16px 18px;box-shadow:0 8px 22px rgba(0,0,0,.12)}
+.warn svg{flex:none;width:34px;height:34px}
+.warn p{margin:0;font-size:clamp(17px,3.5vw,20px)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.facts div{background:var(--sf);border:1px solid var(--ln);border-radius:18px;padding:16px 18px}
+.facts b{display:block;font-family:Fraunces,Georgia,serif;font-size:26px;color:var(--af);line-height:1.1}
+.facts span{color:var(--mu)}
+h2{font-size:clamp(26px,5vw,34px);margin:0 0 6px;font-weight:800}
+.sub{margin:0 0 18px;color:var(--mu)}
+.sugar{margin:40px auto 0}
+.panel{background:linear-gradient(160deg,var(--gb),transparent 85%),var(--sf);border:1px solid var(--gl);border-radius:26px;padding:22px 18px}
+.panel h2{color:var(--gn)}
+.cat{margin-top:44px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.chips button{min-height:44px;padding:0 18px;border-radius:999px;border:1px solid var(--ln);background:var(--sf);color:var(--tx);font:inherit;font-weight:600;cursor:pointer;transition:background .15s}
+.chips button:hover{background:var(--bg)}
+.chips button[aria-pressed="true"]{background:var(--ac);border-color:var(--ac);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+@media (max-width:600px){.grid{grid-template-columns:repeat(2,1fr);gap:10px}}
+.card{background:var(--sf);border:1px solid var(--ln);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 2px 8px rgba(60,30,10,.06);transition:transform .2s,box-shadow .2s}
+@media (hover:hover) and (prefers-reduced-motion:no-preference){.card:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(60,30,10,.16)}}
+.ph{position:relative;background:#fff}
+.ph img{width:100%;aspect-ratio:1/1;object-fit:contain;display:block}
+.tag{position:absolute;top:10px;left:10px;background:#1f7a47;color:#fff;font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px}
+.cb{padding:14px;display:flex;flex-direction:column;gap:4px;flex:1}
+.cb p{margin:0}
+.br{color:var(--mu);font-size:13px}
+.cb h3{margin:0;font-size:17px;line-height:1.25;font-weight:600}
+.pr{font-family:Fraunces,Georgia,serif;font-size:26px;font-weight:800;color:var(--af);margin-top:8px!important}
+.pr small{font-family:Inter,system-ui,sans-serif;font-size:13px;font-weight:600;color:var(--mu)}
+.nt{font-size:12.5px;color:var(--mu)}
+.cb .btn{margin-top:auto;font-size:15px}
+.cb .nt+.btn{margin-top:12px}
+footer{margin-top:52px;background:var(--sf);border-top:1px solid var(--ln);padding:26px 0 44px;color:var(--mu)}
+footer p{margin:0 0 8px}
+</style></head><body>
+<header class="hero"><div class="wrap">
+<div><p class="kicker">Pedidos por encargo desde España</p>
+<h1>Productos de España para tu mesa en México</h1>
+<p class="lead">Chocolates, dulces, mermeladas y más de marcas españolas. Elige lo que quieras y pídelo por WhatsApp.</p>
+<a class="btn" href="https://wa.me/525512378622" target="_blank" rel="noopener">Escríbeme por WhatsApp</a></div>
+<div class="stack" id="stack" aria-hidden="true"></div>
+</div></header>
+<section class="wrap info" aria-label="Condiciones">
+<div class="warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v5"/><path d="M12 16.5v.01"/></svg>
+<p><strong>Los precios son aproximados.</strong> El precio final se confirma por WhatsApp antes de pagar el adelanto.</p></div>
+<div class="facts">
+<div><b>18 de diciembre</b><span>Fecha límite de pedidos</span></div>
+<div><b>50 % de adelanto</b><span>Se requiere para confirmar tu pedido</span></div>
+</div></section>
+<main class="wrap cat"><h2>Todo el catálogo</h2>
+<p class="sub">Filtra por categoría y pide lo que te guste.</p>
+<div class="chips" id="chips" role="group" aria-label="Categorías"></div>
+<div class="grid" id="grid"></div></main>
+<footer><div class="wrap">
+<p><strong>Antes de pedir:</strong> precios en pesos mexicanos (MXN), aproximados. El precio final se confirma por WhatsApp antes de pagar el adelanto. Pedidos hasta el 18 de diciembre, con 50 % de adelanto.</p>
+<p>WhatsApp: +52 55 1237 8622</p></div></footer>
+<script>
+var D=[{"c": "Chocolates", "n": "Chocolate con Oreo", "b": "Milka", "w": "100 g", "p": "84.70", "i": "img/01.jpg", "s": 0}, {"c": "Chocolates", "n": "Chocolate con leche", "b": "Carrefour", "w": "150 g", "p": "51.98", "i": "img/02.jpg", "s": 0}, {"c": "Chocolates", "n": "Chocolate con leche y avellanas troceadas", "b": "Carrefour", "w": "150 g", "p": "69.30", "i": "img/03.jpg", "s": 0}, {"c": "Chocolates", "n": "Chocolate con leche y almendras troceadas", "b": "Carrefour", "w": "150 g", "p": "65.45", "i": "img/04.jpg", "s": 0}, {"c": "Chocolates", "n": "Chocolate negro relleno sabor naranja", "b": "Carrefour", "w": "150 g", "p": "61.60", "i": "img/05.jpg", "s": 0}, {"c": "Chocolates", "n": "Chocolate negro 80 % cacao", "b": "Carrefour Selection", "w": "100 g", "p": "88.55", "i": "img/06.jpg", "s": 0}, {"c": "Chocolates", "n": "Chocolate negro con menta", "b": "Carrefour Selection", "w": "100 g", "p": "80.85", "i": "img/07.jpg", "s": 0}, {"c": "Chocolates", "n": "Chocolate para hacer a la taza XL", "b": "Chocolates Valor", "w": "350 g", "p": "242.55", "i": "img/08.jpg", "s": 0}, {"c": "Chocolates", "n": "Tableta de chocolate puro", "b": "Chocolates Valor", "w": "200 g", "p": "107.80", "i": "img/09.jpg", "s": 0}, {"c": "Chocolates", "n": "Chocolate negro 70 % cacao con almendras", "b": "Chocolates Valor", "w": "250 g", "p": "269.50", "i": "img/10.jpg", "s": 0}, {"c": "Chocolates", "n": "Chocolate negro 70 % cacao sin azúcares añadidos XL", "b": "Chocolates Valor", "w": "180 g", "p": "221.38", "i": "img/11.jpg", "s": 1}, {"c": "Chocolates", "n": "Chocolate puro con almendras XL, 0 % azúcares", "b": "Chocolates Valor", "w": "180 g", "p": "261.80", "i": "img/12.jpg", "s": 1}, {"c": "Chocolates", "n": "Chocolate puro con almendras XL", "b": "Chocolates Valor", "w": "300 g", "p": "254.10", "i": "img/13.jpg", "s": 0}, {"c": "Chocolates", "n": "Chocolate con leche y almendras enteras", "b": "Carrefour", "w": "200 g", "p": "98.18", "i": "img/14.jpg", "s": 0}, {"c": "Chocolates", "n": "Chocolate blanco con avellanas, sin gluten", "b": "Carrefour", "w": "200 g", "p": "103.95", "i": "img/15.jpg", "s": 0}, {"c": "Chocolates", "n": "Chocolate blanco para postres", "b": "Carrefour", "w": "200 g", "p": "57.75", "i": "img/16.jpg", "s": 0}, {"c": "Dulces y golosinas", "n": "Pandorino", "b": "Dulcesol", "w": "3 piezas", "p": "38.50", "i": "img/17.jpg", "s": 0}, {"c": "Dulces y golosinas", "n": "Chapela", "b": "Dulcesol", "w": "3 piezas", "p": "38.50", "i": "img/18.jpg", "s": 0}, {"c": "Dulces y golosinas", "n": "Cañas con crema", "b": "Carrefour", "w": "4 piezas", "p": "88.55", "i": "img/19.jpg", "s": 0}, {"c": "Dulces y golosinas", "n": "Crepes de chocolate", "b": "Carrefour", "w": "8 piezas", "p": "88.55", "i": "img/20.jpg", "s": 0}, {"c": "Dulces y golosinas", "n": "Fartons", "b": "Fartons Polo", "w": "6 piezas", "p": "57.75", "i": "img/21.jpg", "s": 0}, {"c": "Dulces y golosinas", "n": "Galletas con cacao, sin gluten", "b": "Carrefour", "w": "2 paquetes de 4", "p": "103.95", "i": "img/22.jpg", "s": 0}, {"c": "Dulces y golosinas", "n": "Gomitas Fresi Pink Mix", "b": "Hacendado", "w": "300 g", "p": "67.38", "i": "img/23.jpg", "s": 0}, {"c": "Dulces y golosinas", "n": "Gomitas Mix con pica", "b": "Hacendado", "w": "300 g", "p": "67.38", "i": "img/24.jpg", "s": 0}, {"c": "Dulces y golosinas", "n": "Llaves súper ácidas", "b": "Hacendado", "w": "80 g", "p": "42.35", "i": "img/25.jpg", "s": 0}, {"c": "Dulces y golosinas", "n": "Caramelos de café 0 % azúcar", "b": "Hacendado", "w": "90 g", "p": "48.13", "i": "img/26.jpg", "s": 1}, {"c": "Mermeladas", "n": "Mermelada de frambuesa", "b": "La Vieja Fábrica", "w": "280 g", "p": "125.13", "i": "img/27.jpg", "s": 0}, {"c": "Mermeladas", "n": "Mermelada de naranja amarga", "b": "La Vieja Fábrica", "w": "290 g", "p": "115.50", "i": "img/28.jpg", "s": 0}, {"c": "Mermeladas", "n": "Mermelada de ciruela y kiwi", "b": "Hacendado", "w": "340 g", "p": "69.30", "i": "img/29.jpg", "s": 0}, {"c": "Mermeladas", "n": "Mermelada de melocotón", "b": "Hacendado", "w": "440 g", "p": "57.75", "i": "img/30.jpg", "s": 0}, {"c": "Mermeladas", "n": "Mermelada de melocotón extra 0 %", "b": "Hacendado", "w": "380 g", "p": "65.45", "i": "img/31.jpg", "s": 1}, {"c": "Mermeladas", "n": "Mermelada de frambuesa", "b": "Hacendado", "w": "340 g", "p": "96.25", "i": "img/32.jpg", "s": 0}, {"c": "Mermeladas", "n": "Mermelada de fresa extra 0 %", "b": "Hacendado", "w": "380 g", "p": "65.45", "i": "img/33.jpg", "s": 1}, {"c": "Mermeladas", "n": "Mermelada de albaricoque", "b": "Hacendado", "w": "440 g", "p": "69.30", "i": "img/34.jpg", "s": 0}, {"c": "Mermeladas", "n": "Mermelada de higo", "b": "Hacendado", "w": "340 g", "p": "80.85", "i": "img/35.jpg", "s": 0}, {"c": "Mermeladas", "n": "Mermelada de tomate", "b": "Hacendado", "w": "440 g", "p": "80.85", "i": "img/36.jpg", "s": 0}, {"c": "Mermeladas", "n": "Mermelada de naranja amarga", "b": "Hacendado", "w": "440 g", "p": "57.75", "i": "img/37.jpg", "s": 0}, {"c": "Mermeladas", "n": "Mermelada de arándanos", "b": "Hacendado", "w": "330 g", "p": "80.85", "i": "img/38.jpg", "s": 0}, {"c": "Bebidas", "n": "Mosto blanco y tinto", "b": "Carrefour", "w": "1 L", "p": "107.80", "i": "img/39.jpg", "s": 0}, {"c": "Bebidas", "n": "Vino blanco Elegido", "b": "Carrefour", "w": "1 L", "p": "100.10", "i": "img/40.jpg", "s": 0}];
+var CATS=['Todos','Chocolates','Dulces y golosinas','Mermeladas','Bebidas','Sin azúcar'];
+var cur='Todos';
+function link(p){var t='Hola, me interesa: '+p.n+' ('+p.w+'), precio aprox. $'+p.p+' MXN. ¿Me confirmas el precio y la disponibilidad?';return 'https://wa.me/525512378622?text='+encodeURIComponent(t);}
+function card(p){return '<article class="card"><div class="ph"><img src="'+p.i+'" alt="'+p.n+' '+p.b+'" loading="lazy">'+(p.s?'<span class="tag">Sin azúcar</span>':'')+'</div><div class="cb"><p class="br">'+p.b+' · '+p.w+'</p><h3>'+p.n+'</h3><p class="pr">≈ $'+p.p+' <small>MXN</small></p><p class="nt">Confirmar precio al pedir por WhatsApp</p><a class="btn" href="'+link(p)+'" target="_blank" rel="noopener">Pedir por WhatsApp</a></div></article>';}
+function draw(){
+var chips=document.getElementById('chips');chips.innerHTML='';
+CATS.forEach(function(c){var b=document.createElement('button');b.type='button';b.textContent=c;b.setAttribute('aria-pressed',c===cur?'true':'false');b.onclick=function(){cur=c;draw();};chips.appendChild(b);});
+document.getElementById('grid').innerHTML=D.filter(function(p){return cur==='Todos'||(cur==='Sin azúcar'?p.s:p.c===cur);}).map(card).join('');}
+document.getElementById('stack').innerHTML=['Pandorino','Chocolate con Oreo','Mermelada de higo'].map(function(n){var p=D.filter(function(x){return x.n===n;})[0];return p?'<img src="'+p.i+'" alt="">':'';}).join('');
+draw();
+</script></body></html>
